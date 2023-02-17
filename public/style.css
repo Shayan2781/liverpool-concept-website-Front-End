@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+:root{
+    --main-color: #dc0714;
+    --main-color-dark : #b71515;
+    --main-text-color: white;
+    --main-purchase-color: darkgreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header-bar{
+    position: fixed;
+    top: 0;
+    height: auto;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 20px 30px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 30px 2px rgba(0, 0, 0, 0.75);
+    z-index: 10;
+}
+.header-bar_anchor-holder{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.nav-anchor{
+    text-decoration: none;
+    background-color: var(--main-color-dark);
+    padding: 15px;
+    color: white;
+    border-radius: 50px;
+    border: 2px solid var(--main-color-dark);
+    font-size: 15px;
+    transition: all 0.25s ease-in-out;
+    font-weight: bold;
+}
+
+.nav-anchor:hover{
+    background-color: var(--main-text-color);
+    color: var(--main-color-dark);
+
+}
+.header-bar h2{
+    color: white;
+}
+
+.header-bar__title{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.header-bar__logo{
+    height: 55px;
+}
+
+.header-bar__logo-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.buy-ticket{
+    z-index: 6;
+    width: 100%;
+    height: auto;
+    padding: 150px 20px 40px 20px;
+    background-color: var(--main-color-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 3px 30px 2px rgba(0, 0, 0, 0.65);
+
+}
+
+.buy-ticket__content{
+    width: 70%;
+    min-width: 320px;
+    height: auto;
+    min-height: 250px;
+    background-color: white;
+    border-radius: 20px;
+    background: linear-gradient(-90deg, rgba(177, 1, 1, 0.65), rgba(0, 0, 0, 0.75)), url('./pics/Anfield.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    flex-wrap: wrap;
+    
+}
+
+.current-game-card{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    width: 30%;
+    min-width: 240px;
+    background-color: rgba(255, 255, 255, 0.75);
+    height: auto;
+    align-self: center;
+    border-radius: 10px;
+    row-gap: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.45);
+}
+
+.current-game-card__team-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+}
+
+.current-game-card__team-info__team-logo{
+    width: 25px;
+}
+
+#team-2{
+    grid-row: 2 / -1;
+}
+
+.current-game-card__game-date{
+    display: flex;
+    flex-direction: column;
+    grid-row: 1 / -1;
+    grid-column: 2 / -1;
+    width: auto;
+    align-self: center;
+    align-items: center;
+    justify-self: left;
+    justify-items: center;
+}
+
+.buy-ticket__content__text-purchase__title{
+    color: var(--main-text-color);
+    font-size: 30px;
+}
+
+.buy-ticket__content__text-purchase{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    gap: 25px;
+}
+
+.buy-ticket__content__text-purchase__purchase{
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-purchase-color);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 17px;
+    align-self: flex-start;
+}
+
+.buy-ticket__content__text-purchase__description{
+    color: white;
+}
+.merch{
+    background: linear-gradient(-90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url('./pics/Shop.jpeg');
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 70px 15px;
+    gap: 15px;
+    z-index: 5;
+}
+
+.merch__card{
+    width: 18%;
+    min-width: 170px;
+    background-color: white;
+    height: auto;
+    box-shadow: 3px 3px 20px 2px rgba(0, 0, 0, 0.5);
+    padding: 12px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-self: center;
+}
+
+
+.merch__card__img{
+    width: 100%;
+    background-size: cover;
+}
+
+.merch__card__price-holder{
+    display: flex;
+    gap: 3px;
+}
+
+.merch__card__old-price{
+    text-decoration: line-through;
+    color: gray;
+}
+.merch__card__new-price{
+    font-weight: bold;
+}
+
+.merch__card__purchase{
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-purchase-color);
+    padding: 5px 8px;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+.players{
+    background-color: var(--main-color-dark);
+    z-index: 6;
+    height: 300px;
+}

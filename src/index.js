@@ -1,17 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import CurrentGame from './CurrentGame';
+/*import CurrentGameTeam from './CurrentGameTeam';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const currentGameTeams = [
+    {
+        logo : "./public/pics/Liverpool_FC.png",
+        teamName : "Livepool"
+    },
+    {
+        logo : "./public/pics/Liverpool_FC.png",
+        teamName : "Chelsea"
+    },
+    {
+        time : "22:30",
+        date : "25/08/2023"
+    }
+]
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+
+
+ReactDOM.render(
+<CurrentGame
+    props
+/>
+, document.getElementById('current-game-card'));
+*/
+
