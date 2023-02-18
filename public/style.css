@@ -22,6 +22,7 @@ main{
     --main-color-darker : #7d0e0e;
     --main-text-color: white;
     --main-purchase-color: darkgreen;
+    --main-hamburger-color : rgba(126, 0, 0, 0.6);
     font-family: Arial, Helvetica, sans-serif;
 }
 .header-bar{
@@ -56,6 +57,7 @@ section{
     font-size: 15px;
     transition: all 0.25s ease-in-out;
     font-weight: bold;
+    text-align: center;
 }
 
 .nav-anchor:hover{
@@ -99,7 +101,7 @@ section{
 
 .buy-ticket__content{
     width: 70%;
-    min-width: 320px;
+    min-width: 280px;
     height: auto;
     min-height: 250px;
     background-color: white;
@@ -279,4 +281,84 @@ section{
 .players__card__position{
     font-weight: bold;
     color: rgb(164, 164, 164);
+}
+
+.header-bar__hamburger{
+    position: fixed;
+}
+
+/************************************************ Media queries for header ****************/
+@media screen and (max-width : 875px){
+    .header-bar_anchor-holder{
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--main-hamburger-color);
+        border-radius: 5px;
+        padding: 30px 40px;
+        height: 100vh;
+        gap: 40px;
+        transition: all 0.3s ease-in-out;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        transform: translateX(400px);
+    }
+    .header-bar{
+        position: static;
+    }
+
+    .header-bar__hamburger{
+        height: 40px;
+        width: 50px;
+        background-color: var(--main-color);
+        top: 30px;
+        right: 20px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        z-index: 11;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .header-bar__hamburger__line{
+        height: 4px;
+        background-color: var(--main-text-color);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .header-bar__hamburger__line:first-child{
+        width: 50%;
+        
+    }
+    .header-bar__hamburger__line:nth-child(2){
+        width: 100%;
+        
+    }
+    .header-bar__hamburger__line:last-child{
+        width: 50%;
+        align-self: flex-end;
+        
+    }
+
+    .display__nav{
+        transform: translateX(0);
+    }
+
+    .header-bar__hamburger__line1{
+        transform: rotate(45deg) translateX(13px) translateY(3px);
+
+    }
+    .header-bar__hamburger__line2{
+        visibility: hidden;        
+    }
+    .header-bar__hamburger__line3{
+        transform: rotate(-45deg) translateX(0px) translateY(-14px);
+        
+    }
+
+
 }

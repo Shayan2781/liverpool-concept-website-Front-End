@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CurrentGame from './Components/CurrentGame';
-import PlayerCard from './PlayerCard';
-import player from './players';
+/*import CurrentGame from './Components/CurrentGame';
+import PlayerCard from './Components/PlayerCard';
+import player from './players';*/
 /*import CurrentGameTeam from './CurrentGameTeam';
 
 const currentGameTeams = [
@@ -22,14 +22,27 @@ const currentGameTeams = [
 */
 
 
+const burger = document.querySelector(".header-bar__hamburger");
+const nav = document.querySelector(".header-bar_anchor-holder");
+const line1 = document.querySelector(".header-bar__hamburger__line:nth-child(1)");
+const line2 = document.querySelector(".header-bar__hamburger__line:nth-child(2)");
+const line3 = document.querySelector(".header-bar__hamburger__line:nth-child(3)");
+
+burger.addEventListener("click", function(){
+    line1.classList.toggle("header-bar__hamburger__line1");
+    line2.classList.toggle("header-bar__hamburger__line2");
+    line3.classList.toggle("header-bar__hamburger__line3");
+    nav.classList.toggle("display__nav");
+
+})
 
 
-ReactDOM.render(
-<PlayerCard
-    name = {player[0].name}
-    img = {player[0].img}
-    position = {player[0].position}
+/*ReactDOM.render(
+<CurrentGame 
+    
+
+
 />
-, document.getElementById('players'));
-
+, document.getElementById('current-game-container'));
+*/
 

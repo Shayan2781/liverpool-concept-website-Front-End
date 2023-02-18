@@ -1,4 +1,4 @@
-/*import React from "react";
+import React from "react";
 import CurrentGameTeam from "./CurrentGameTeam";
 
 function CurrentGame(props){
@@ -6,10 +6,12 @@ function CurrentGame(props){
     <CurrentGameTeam 
         teamName = {props[0].teamName}
         logo = {props[0].logo}
+        id = {props[0].id}
     />
     <CurrentGameTeam 
         teamName = {props[1].teamName}
         logo = {props[1].logo}
+        id = {props[1].id}
     />
     <div className="current-game-card__game-date">
       <h2>{props[2].time}</h2>
@@ -18,4 +20,4 @@ function CurrentGame(props){
   </div>
 }
 
-export default CurrentGame;*/
+export default CurrentGame;
