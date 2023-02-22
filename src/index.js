@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CurrentGameTeam from './Components/CurrentGameTeam';
-/*import CurrentGame from './Components/CurrentGame';
 import PlayerCard from './Components/PlayerCard';
-import player from './players';*/
+import players from './players';
+import Carousel from 'react-multi-carousel';
+import CreateMerchCard from './Components/MerchCard';
+import merch from './merch';
+/*import CurrentGame from './Components/CurrentGame';*/
+
 
 const currentGameTeams = [
     {
-        logo : '/Liverpool_FC.png',
+        logo : './pics/Liverpool_FC.png',
         teamName : "Liverpool"
     },
     {
-        logo : "./public/pics/Liverpool_FC.png",
+        logo : './pics/chelsea.png',
         teamName : "Chelsea"
     },
     {
@@ -19,6 +23,26 @@ const currentGameTeams = [
         date : "25/08/2023"
     }
 ];
+
+const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
 
 
 
@@ -35,6 +59,15 @@ burger.addEventListener("click", function(){
     nav.classList.toggle("display__nav");
 
 })
+
+
+function CreatePlayerCard (player){
+    return <PlayerCard
+        name = {player.name}
+        img = {player.img}
+        position = {player.position}
+    />
+}
 
 
 ReactDOM.render(
@@ -55,5 +88,12 @@ ReactDOM.render(
     </div>
   </div>
 , document.getElementById('current-game-container'));
+
+ReactDOM.render( 
+  <div className="merch">
+      {merch.map(CreateMerchCard)}
+  </div>
+
+, document.getElementById("merch"));
 
 

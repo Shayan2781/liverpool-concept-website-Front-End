@@ -1,26 +1,36 @@
 const player = [
     {
         name : "Jurgen Klopp",
-        img : "./Klopp.jpeg",
+        img : "./players/Klopp.jpeg",
         position: "Coach"
     },
 
     {
         name : "Alisson Becker",
-        img : "../public/players/Becker.jpeg",
+        img : "./players/Becker.jpeg",
         position: "GK"
     },
 
     {
         name : "Caomihin Kelleher",
-        img : "../public/players/Kelleher.jpeg",
+        img : "./players/Kelleher.jpeg",
         position: "GK"
-    },
+    }/*,
     {
         name : "Alexander Arnold",
-        img : "../public/players/Arnold.jpeg",
+        img : "./players/Arnold.jpeg",
         position: "RB"
-    }
+    },
+    {
+        name : "Virgil Van Dijk",
+        img : "./players/Arnold.jpeg",
+        position: "CB"
+    },
+    {
+        name : "Joel Matip",
+        img : "./players/Arnold.jpeg",
+        position: "CB"
+    }*/
 
 ];
 

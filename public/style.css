@@ -27,9 +27,9 @@ main{
     font-family: Arial, Helvetica, sans-serif;
 }
 .header-bar{
-    position: sticky;
+    position: fixed;
     top: 0;
-    height: auto;
+    height: 100px;
     width: 100%;
     background-color: var(--main-color);
     padding: 20px 30px 20px 20px;
@@ -40,8 +40,13 @@ main{
     box-shadow: 0 3px 30px 2px rgba(0, 0, 0, 0.75);
     z-index: 10;
 }
+
+body{
+    padding-top: 100px;
+}
 section{
-    height: 100vh;
+    height: auto;
+    position: relative;
 }
 .header-bar_anchor-holder{
     display: flex;
@@ -251,16 +256,19 @@ section{
 .players{
     background-color: var(--main-color-darker);
     z-index: 6;
-    height: 300px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    gap: 20px;
+    padding: 70px 10px;
+    padding-top: 90px;
+    flex-wrap: wrap;
 }
 
 .players__card{
     background-color: var(--main-color-dark);
-    width: 200px;
+    width: 240px;
     height: 130px;
     border-radius: 10px;
     display: flex;
@@ -268,6 +276,7 @@ section{
     align-items: center;
     gap: 10px;
     box-shadow: 3px 3px 20px 3px rgba(0, 0, 0, 0.3);
+    padding: 0px 5px;
 }
 
 .players__card__img{
@@ -283,6 +292,7 @@ section{
     font-weight: bolder;
     color: var(--main-text-color);
     font-size: large;
+    text-align: center;
 }
 
 .players__card__position{
@@ -329,6 +339,10 @@ section{
 .trophies__holder__trophy-card__img{
     width: 80%;
     object-fit: cover;
+}
+
+.trophies__holder__trophy-card__title{
+    text-align: center;
 }
 
 /************************************************ Media queries for header ****************/
@@ -398,5 +412,8 @@ section{
     .header-bar__hamburger__line3{
         transform: rotate(-45deg) translateX(0px) translateY(-14px);
         
+    }
+    body{
+        padding-top: 0;
     }
 }
