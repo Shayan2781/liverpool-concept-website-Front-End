@@ -8,7 +8,7 @@ function MerchCard (props){
       <p className="merch__card__old-price">{props.oldPrice}</p>
       <p className="merch__card__new-price">{props.newPrice}</p>
     </div>
-    <a className = "merch__card__purchase"href="#">Purchase</a>
+    <a className = "merch__card__purchase"href="#">Add to cart</a>
   </div>
     
 }

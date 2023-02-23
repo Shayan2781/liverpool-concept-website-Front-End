@@ -124,6 +124,7 @@ section{
 
 .current-game-card{
     display: grid;
+    margin-right: 20px;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     width: 35%;
@@ -248,9 +249,17 @@ section{
     text-decoration: none;
     color: white;
     background-color: var(--main-purchase-color);
-    padding: 8px 10px;
+    padding: 7px 9px;
     border-radius: 5px;
+    border: 3px solid transparent;
     align-self: flex-start;
+    transition: all 0.25s ease-in-out;
+}
+
+.merch__card__purchase:hover{
+    border-color: var(--main-purchase-color);
+    color: var(--main-purchase-color);
+    background-color: var(--main-text-color);
 }
 
 .players{

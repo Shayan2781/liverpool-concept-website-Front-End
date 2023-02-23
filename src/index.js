@@ -2,49 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CurrentGameTeam from './Components/CurrentGameTeam';
 import PlayerCard from './Components/PlayerCard';
-import players from './players';
+import players from './Data/players';
 import Carousel from 'react-multi-carousel';
 import CreateMerchCard from './Components/MerchCard';
-import merch from './merch';
+import merch from './Data/merch';
+import CreateTrophyCard from './Components/TrophyCard';
+import trophies from './Data/trophies';
+import currentGameTeams from './Data/currentGame';
 /*import CurrentGame from './Components/CurrentGame';*/
-
-
-const currentGameTeams = [
-    {
-        logo : './pics/Liverpool_FC.png',
-        teamName : "Liverpool"
-    },
-    {
-        logo : './pics/chelsea.png',
-        teamName : "Chelsea"
-    },
-    {
-        time : "22:30",
-        date : "25/08/2023"
-    }
-];
-
-const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
-  };
-
-
 
 const burger = document.querySelector(".header-bar__hamburger");
 const nav = document.querySelector(".header-bar_anchor-holder");
@@ -95,5 +60,11 @@ ReactDOM.render(
   </div>
 
 , document.getElementById("merch"));
+
+ReactDOM.render(
+  <div className='trophies__holder'>
+    {trophies.map(CreateTrophyCard)}
+  </div>
+, document.getElementById('trophies'));
 
 
