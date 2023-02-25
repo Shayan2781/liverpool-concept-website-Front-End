@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import CurrentGameTeam from './Components/CurrentGameTeam';
-import PlayerCard from './Components/PlayerCard';
+import CreatePlayerCard from './Components/PlayerCard';
 import players from './Data/players';
-import Carousel from 'react-multi-carousel';
 import CreateMerchCard from './Components/MerchCard';
 import merch from './Data/merch';
 import CreateTrophyCard from './Components/TrophyCard';
 import trophies from './Data/trophies';
 import currentGameTeams from './Data/currentGame';
+import AliceCarousel from 'react-alice-carousel';
 /*import CurrentGame from './Components/CurrentGame';*/
 
 const burger = document.querySelector(".header-bar__hamburger");
@@ -26,14 +26,44 @@ burger.addEventListener("click", function(){
 })
 
 
-function CreatePlayerCard (player){
-    return <PlayerCard
-        name = {player.name}
-        img = {player.img}
-        position = {player.position}
-    />
-}
+const responsive = {
+  0: {
+    items: 1
+  },
+  540: {
+    items: 2
+  },
+  780: {
+    items: 3
+  },
+  1080 :{
+    items : 4
+  },
+  1400 :{
+    items : 5
+  }
+};
 
+
+
+ReactDOM.render( 
+<AliceCarousel
+  startIndex = {1}
+  fadeOutAnimation={true}
+  mouseDragEnabled={true}
+  playButtonEnabled={true}
+  responsive={responsive}
+  autoPlayDirection="rtl"
+  autoPlayActionDisabled={true}
+>
+  {players.map(CreatePlayerCard)}
+</AliceCarousel>
+  
+  
+  
+  
+  
+,document.getElementById('players') )
 
 ReactDOM.render(
 <div className="current-game-card" id = "current-game-card">

@@ -15,7 +15,7 @@ const player = [
         name : "Caomihin Kelleher",
         img : "./players/Kelleher.jpeg",
         position: "GK"
-    }/*,
+    },
     {
         name : "Alexander Arnold",
         img : "./players/Arnold.jpeg",
@@ -23,14 +23,34 @@ const player = [
     },
     {
         name : "Virgil Van Dijk",
-        img : "./players/Arnold.jpeg",
+        img : "./players/Virgil.jpeg",
         position: "CB"
     },
     {
         name : "Joel Matip",
-        img : "./players/Arnold.jpeg",
+        img : "./players/Matip.jpeg",
         position: "CB"
-    }*/
+    },
+    {
+        name : "Andrew Robertson",
+        img : "./players/Robo.jpg",
+        position: "LB"
+    },
+    {
+        name : "Thiago Alcantera",
+        img : "./players/Thiago.jpg",
+        position: "CM"
+    },
+    {
+        name : "Jordan Henderson",
+        img : "./players/Hendo.jpg",
+        position: "CM"
+    },
+    {
+        name : "Naby Keita",
+        img : "./players/Keita.jpg",
+        position: "CM"
+    }
 
 ];
 
